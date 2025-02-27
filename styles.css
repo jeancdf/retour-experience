@@ -27,11 +27,11 @@ body {
 
 .hero {
     text-align: center;
-    padding: 4rem 1rem;
+    padding: 2.5rem 1rem;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
     margin-bottom: 1rem;
     color: var(--primary-color);
 }
@@ -109,16 +109,171 @@ footer {
     color: #666;
 }
 
+/* Test Guide and Development State sections */
+.test-guide, .dev-state {
+    background: var(--card-background);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 3rem 0;
+}
+
+.test-guide h2, .dev-state h2 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.guide-content, .state-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.test-guide h3, .dev-state h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 1.8rem 0 1rem;
+}
+
+.test-guide h4, .dev-state h4 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0 0.8rem;
+    color: #555;
+}
+
+.test-guide p, .dev-state p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.test-guide ul, .test-guide ol,
+.dev-state ul, .dev-state ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.test-guide li, .dev-state li {
+    margin-bottom: 0.5rem;
+}
+
 @media (max-width: 768px) {
     .hero {
         padding: 2rem 1rem;
     }
 
     h1 {
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 
     .info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .test-guide, .dev-state {
+        padding: 1.5rem;
+    }
+    
+    .test-guide h2, .dev-state h2 {
+        font-size: 1.5rem;
+    }
+    
+    .test-guide h3, .dev-state h3 {
+        font-size: 1.3rem;
+    }
+    
+    .test-guide h4, .dev-state h4 {
+        font-size: 1.1rem;
+    }
+
+    .resources h2 {
+        font-size: 2rem;
+    }
+} 
+
+/* Resources section */
+.resources {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.resources h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.resources-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.resource-card {
+    background: var(--card-background);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resource-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.resource-card h3 {
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.resource-card p {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.button.outline {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.button.outline:hover {
+    background: rgba(74, 144, 226, 0.1);
+}
+
+/* Page navigation */
+.page-nav {
+    margin: 2rem 0;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: transform 0.2s ease;
+}
+
+.back-link:hover {
+    transform: translateX(-3px);
+}
+
+.back-link i {
+    margin-right: 0.5rem;
+}
+
+/* Full page sections */
+.test-guide.full-page, .dev-state.full-page {
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .resources-container {
         grid-template-columns: 1fr;
     }
 } 
